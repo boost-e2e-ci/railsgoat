@@ -1,0 +1,39 @@
+{
+  "violation-policy": [
+    {
+      "class": "cloud-misconfiguration",
+      "rules": {
+        "sensitive-data-in-block-attribute": "block",
+        "egress-security-group-public-access": "block"
+      }
+    },
+    {
+      "class": "web-app",
+      "rules": {
+        "node-unsafe-property-access": "block",
+        "dangerous-function-buffer-noassert": "block",
+        "dangerous-function-buffer-alloc-unsafe": "block",
+        "os-command-injection": "block",
+        "non-literal-require": "block",
+        "eval-with-expression": "block",
+        "unsafe-child-process": "block",
+        "wildcard-in-system-call": "block",
+        "node-vm-runinthiscontext": "block",
+        "dangerous-function-buffer-non-literal-alloc": "block",
+        "dynamic-code-injection": "block",
+        "tls-disabled-cert-validation": "block",
+        "node-disable-ssl": "block",
+        "window-postmessage-unsafe-target-origin": "block",
+        "tls-insecure-protocol-config": "block",
+        "cookie-secure-flag-not-set": "block",
+        "express-detect-no-csrf-before-method-override": "block"
+      }
+    },
+    {
+      "class": "stored-secrets",
+      "rules": {
+        "private-key": "block"
+      }
+    }
+  ]
+}
