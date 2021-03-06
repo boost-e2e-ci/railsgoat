@@ -1,13 +1,13 @@
 steps:
 - command: echo testing pipeline
   plugins:
-		- ecr#v2.3.0:
-				login: true
-				no-include-email: true
-				region: "us-east-2"
+    - ecr#v2.3.0:
+        login: true
+        no-include-email: true
+        region: "us-east-2"
     - peaudecastor/boost-security-scanner#master:
         org_name: boost-e2e-tester-ci-stage
         repo_name: railsgoat
-				docker_create_args: --network=host
+        docker_create_args: --network=host
         fail_on_error: false
-				scanner_version: latest
+        scanner_version: latest
