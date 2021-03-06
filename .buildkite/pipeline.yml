@@ -1,7 +1,7 @@
 steps:
 - command: echo testing pipeline
   plugins:
-      - peaudecastor/boost-security-scanner#master:
-              org_name: boost-e2e-tester-ci-stage
-                      repo_name: railsgoat
-                              fail_on_error: false
+    - peaudecastor/boost-security-scanner#master:
+      org_name: boost-e2e-tester-ci-stage
+      repo_name: railsgoat
+      fail_on_error: false
