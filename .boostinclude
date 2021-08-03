@@ -1,2 +1,13 @@
-bin/brakeman
-
+# Boost (docs.boostsecurity.io) is a tool used by Product Security to aggregate
+# results from various security tools (e.g., Brakeman, Semgrep, etc.), and to
+# provide in-context comments on PRs.
+#
+# Additionally, Boost optimizes tool runtime by scanning only modified files
+# (where appropriate) on PR runs.
+#
+# This file - written in the .gitignore syntax - tells Boost what files to
+# always retain when preparing the working directory for a diff-scan.
+# Scripts used to run tools:
+bin/**/*
+# Configuration for tools:
+config/**/*
