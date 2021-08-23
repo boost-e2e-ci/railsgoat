@@ -1,6 +1,7 @@
 {
   "violation-policy": [ {
     "rules": {
+      "brakeman-CheckCrossSiteScripting": "alert",
       "non-literal-require": "alert"
     }
   } ]
