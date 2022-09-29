@@ -31,10 +31,10 @@ jobs:
       - name: Execute boost-brakeman
         uses: boostsecurityio/boostsec-scanner-github@v4
         with:
-          registry_module: ${{ env.test == true }}
+          api_endpoint: ${{ env.test == true }}
           api_token: ${{ env.test1 == true }}
-          api_endpoint: ${{ env.test2 == true }}
-          api_enabled: ${{ env.test3 == true }}
-          log_level: ${{ env.test4 == true }}
-          pre_scan_cmd: ${{ env.test5 == true }}
-          cli_version: ${{ env.test6 == true }}
+          additional_args: ${{ env.test2 == true }}
+          cli_version: ${{ env.test3 == true }}
+          main_branch: ${{ env.test4 == true }}
+          log_level: ${{ env.test5 == true }}
+          scan_timeout: ${{ env.test6 == true }}
