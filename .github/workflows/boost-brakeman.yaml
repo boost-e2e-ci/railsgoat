@@ -17,6 +17,15 @@ jobs:
   scanner:
     name: boost
     runs-on: ubuntu-latest
+    inputs:
+      test:
+        description: "Additional CLI arguments to pass"
+        required: false
+        default: "true"
+      test2:
+        description: "Additional CLI arguments to pass"
+        required: false
+        default: true
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -27,5 +36,5 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           api_endpoint: https://api.dev.boostsec.io
           api_enabled: "true"
-          log_level: true
-          pre_scan_cmd: "true"
+          log_level: ${{ inputs.test == true }}
+          pre_scan_cmd: ${{ inputs.test2 == true }}
