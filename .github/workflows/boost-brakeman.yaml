@@ -31,7 +31,7 @@ jobs:
       - name: Execute boost-brakeman
         uses: boostsecurityio/boostsec-scanner-github@v4
         with:
-          api_endpoint: ${{ fromJSON(env.test) == true }}
+          api_enabled: ${{ fromJSON(env.test) }}
           api_token: ${{ env.test1 == true }}
           additional_args: ${{ env.test2 == true }}
           cli_version: ${{ env.test3 == true }}
