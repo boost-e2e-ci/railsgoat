@@ -20,7 +20,7 @@ env:
   test4: "true"
   test5: "true"
   test6: ${{ true == true }}
-  test7: ${{ env.test == 'true' }}
+  test7: ${{ $test == 'true' }}
 jobs:
   scanner:
     name: boost
