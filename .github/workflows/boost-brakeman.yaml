@@ -29,4 +29,3 @@ jobs:
           api_enabled: "true"
           log_level: true
           pre_scan_cmd: "true"
-          additional_args: ${{ "true" == true }}
