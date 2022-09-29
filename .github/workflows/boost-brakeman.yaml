@@ -20,7 +20,7 @@ env:
   test4: "true"
   test5: "true"
   test6: ${{ true == true }}
-  test7: ${{ $test == 'true' }}
+
 jobs:
   scanner:
     name: boost
@@ -31,9 +31,10 @@ jobs:
       - name: Execute boost-brakeman
         uses: boostsecurityio/boostsec-scanner-github@v4
         with:
-          registry_module: scanners/boostsecurityio/brakeman-scanner
-          api_token: ${{ secrets.BOOST_API_TOKEN }}
-          api_endpoint: https://api.dev.boostsec.io
-          api_enabled: "true"
-          log_level: ${{ env.test == true }}
-          pre_scan_cmd: ${{ env.test2 == true }}
+          registry_module: ${{ env.test == true }}
+          api_token: ${{ env.test1 == true }}
+          api_endpoint: ${{ env.test2 == true }}
+          api_enabled: ${{ env.test3 == true }}
+          log_level: ${{ env.test4 == true }}
+          pre_scan_cmd: ${{ env.test5 == true }}
+          cli_version: ${{ env.test6 == true }}
