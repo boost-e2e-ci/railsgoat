@@ -14,12 +14,12 @@ on:
       - synchronize
 
 env:
-  test: TRUE
-  test2: true
-  test3: True
-  test4: "true"
-  test5: "true"
-  test6: ${{ true == true }}
+  test: "true"
+  test2: "True"
+  test3: "TRUE"
+  test4: "false"
+  test5: true
+  test6: TRUE
 
 jobs:
   scanner:
