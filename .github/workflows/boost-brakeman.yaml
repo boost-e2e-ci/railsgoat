@@ -16,7 +16,8 @@ on:
 env:
   test: TRUE
   test2: True
-
+  test3: true
+  test4: "true"
 jobs:
   scanner:
     name: boost
@@ -33,3 +34,5 @@ jobs:
           api_enabled: "true"
           log_level: ${{ env.test == true }}
           pre_scan_cmd: ${{ env.test2 == true }}
+          additional_args: ${{ env.test3 == true }}
+          main_branch: ${{ env.test4 == true }}
