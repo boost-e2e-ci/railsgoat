@@ -13,14 +13,6 @@ on:
       - opened
       - synchronize
 
-env:
-  test: "true"
-  test2: "True"
-  test3: "TRUE"
-  test4: "false"
-  test5: true
-  test6: TRUE
-
 jobs:
   scanner:
     name: boost
@@ -29,12 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Execute boost-brakeman
-        uses: boostsecurityio/boostsec-scanner-github@v4
+        uses: boostsecurityio/boostsec-scanner-github@v4.1
         with:
-          api_enabled: ${{ fromJSON(env.test) }}
-          api_token: ${{ env.test1 == true }}
-          additional_args: ${{ env.test2 == true }}
-          cli_version: ${{ env.test3 == true }}
-          main_branch: ${{ env.test4 == true }}
-          log_level: ${{ env.test5 == true }}
-          scan_timeout: ${{ env.test6 == true }}
+          api_enabled: true
