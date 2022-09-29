@@ -28,4 +28,5 @@ jobs:
           api_endpoint: https://api.dev.boostsec.io
           api_enabled: "true"
           log_level: true
-          BOOST_PRE_SCAN: "true"
+          pre_scan_cmd: "true"
+          additional_args: ${{ "true" == true }}
