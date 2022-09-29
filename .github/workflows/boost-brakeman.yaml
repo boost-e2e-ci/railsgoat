@@ -14,8 +14,8 @@ on:
       - synchronize
 
 env:
-  test: "true"
-  test2: true
+  test: TRUE
+  test2: True
 
 jobs:
   scanner:
