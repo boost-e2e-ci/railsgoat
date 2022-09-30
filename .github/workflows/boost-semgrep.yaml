@@ -1,4 +1,4 @@
-name: Boost Brakeman Scanner
+name: Boost Semgrep Scanner
 on:
   workflow_dispatch:
   push:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Execute boost-brakeman
+      - name: Execute boost-semgrep
         uses: boostsecurityio/boostsec-scanner-github@v4.1
         with:
           registry_module: scanners/boostsecurityio/semgrep-scanner
