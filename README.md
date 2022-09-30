@@ -15,7 +15,7 @@ Pick the appropriate operating system and follow the instructions.
 After installing the above software, clone this repo:
 
 ```bash
-$ git clone git@github.com:OWASP/railsgoat.git
+$ git cl one git@github.com:OWASP/railsgoat.git
 ```
 
 **NOTE: NOT NECESSARY IF YOU WANT TO WORK WITH RAILS 6.** Otherwise, if you wish to use the Rails 3 or 4 versions, you'll need to switch branches:
@@ -53,6 +53,7 @@ $ rails server
 Open your favorite browser, navigate to `http://localhost:3000` and start hacking!
 
 ## Docker Install
+
 To run Railsgoat with Docker you must first have [Docker](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/) installed. Once those dependencies are installed, cd into the Railsgoat directory where you've cloned the code and run. Rails requires Compose **1.6.0** or above and require a Docker Engine of version **1.10.0** or above.
 
 For Mac Apple Silicon (ARM64) you must also have Rosetta install
@@ -67,11 +68,13 @@ $ docker-compose up
   Attaching to railsgoat_web_1
 $
 ```
+
 Once you see the preceeding message Railsgoat is running on your localhost on port 3000.
 
 Open your favorite browser, navigate to `http://<dockerIP>:3000` and start hacking! The Docker IP is usually `192.168.99.100`. Run `docker-machine env` to verify.
 
 Note: if your container exits with an error, it may be because a server is already running:
+
 ```
 A server is already running. Check /myapp/tmp/pids/server.pid.
 => Booting Thin
@@ -81,6 +84,7 @@ http://0.0.0.0:3000
 => Ctrl-C to shutdown server
 Exiting
 ```
+
 In this case, remove that server.pid file and try again. Note also that this file is in your current working directory, not inside the container.
 
 ## Capybara Tests
@@ -99,7 +103,7 @@ $ rails training SPEC=spec/vulnerabilities/sql_injection_spec.rb
 
 ## MySQL Environment
 
-By default in development mode Railsgoat runs with a SQLite database. There is an environment defined to use MySQL. For some of the SQL injection vulnerabilities to work you have to run the app with MySQL as the database. The following steps will setup and run Railsgoat to use MySQL. *MySQL must be installed and running before running these steps*
+By default in development mode Railsgoat runs with a SQLite database. There is an environment defined to use MySQL. For some of the SQL injection vulnerabilities to work you have to run the app with MySQL as the database. The following steps will setup and run Railsgoat to use MySQL. _MySQL must be installed and running before running these steps_
 
 ```
 #Create the MySQL database
